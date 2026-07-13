@@ -46,8 +46,8 @@ export default function App() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (!file) return;
 
     setLoading(true);
@@ -58,8 +58,7 @@ export default function App() {
     formData.append('document', file);
 
     try {
-      // Update the line to this:
-        const response = await fetch('https://freelance-contractflow-backend.onrender.com/api/verify-document', {
+      const response = await fetch('https://freelance-contractflow-backend.onrender.com/api/verify-document', {
         method: 'POST',
         body: formData,
       });
@@ -75,10 +74,6 @@ export default function App() {
     } finally {
       setLoading(false);
     }
-  };
-
-  const preventDefault = (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
   };
 
   return (
