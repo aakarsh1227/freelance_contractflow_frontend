@@ -58,7 +58,8 @@ export default function App() {
     formData.append('document', file);
 
     try {
-      const response = await fetch('http://localhost:8080/api/verify-document', {
+      // Update the line to this:
+        const response = await fetch('https://freelance-contractflow-backend.onrender.com/api/verify-document', {
         method: 'POST',
         body: formData,
       });
