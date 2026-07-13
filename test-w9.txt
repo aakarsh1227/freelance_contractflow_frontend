@@ -1,0 +1,5 @@
+Entity Name: Crimson Logistics LLC
+Document Type: US Statutory Form W-9
+Tax ID Status: Verified Active
+Execution Signature Parameters: [Statically Signed & Executed by Authorized Officer]
+Verification Timestamp: 2026-04-12
