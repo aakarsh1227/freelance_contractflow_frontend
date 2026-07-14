@@ -177,7 +177,9 @@ export default function App() {
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 border-b border-slate-800/40 pb-6 mb-6">
                   <div>
                     <span className="text-[10px] font-mono tracking-widest text-slate-500 uppercase block mb-1">AUDIT SUBJECT REGISTERED NAME</span>
-                    <h3 className="text-xl font-bold tracking-tight text-white mb-2">{report.vendorName || "Unidentified Entity"}</h3>
+                    <h3 className="text-xl font-bold tracking-tight text-white mb-2">
+                      {report.vendorName && report.vendorName !== "Unknown" ? report.vendorName : "Processed Form"}
+                    </h3>
                     <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium font-mono bg-slate-900 border border-slate-800 text-slate-400">
                       🗂️ {report.documentType === 'InsuranceCertificate' ? 'Certificate of Insurance' : report.documentType}
                     </span>
